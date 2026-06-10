@@ -399,45 +399,6 @@ function HomePage({navigate,onOpenAuth,user}){
         </div>
       </section>
 
-      {/* 통계 */}
-      <section style={{background:C.white,borderBottom:`1px solid ${C.border}`}}>
-        <div style={{maxWidth:900,margin:"0 auto",padding:"32px 24px",display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(140px,1fr))"}}>
-          {[{n:"0건",l:"진행중인 연구",sub:"곧 채워질 예정"},{n:"0명",l:"등록된 참가자",sub:"첫 번째가 되어보세요"},{n:"0건",l:"완료된 연구",sub:"기록이 쌓이는 중"},{n:"₩0",l:"지급된 보상금",sub:"시작을 기다리는 중"}].map((s,i,arr)=>(
-            <div key={i} style={{textAlign:"center",padding:"20px 10px",borderRight:i<arr.length-1?`1px solid ${C.border}`:"none"}}>
-              <div style={{fontSize:24,fontWeight:900,color:C.black,letterSpacing:"-0.02em"}}>{s.n}</div>
-              <div style={{fontSize:12,color:C.gray500,marginTop:4,fontWeight:600}}>{s.l}</div>
-              <div style={{fontSize:11,color:C.gray300,marginTop:2}}>{s.sub}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 이용 방법 */}
-      <section style={{padding:"60px 24px",background:C.white}}>
-        <div style={{maxWidth:900,margin:"0 auto"}}>
-          <h2 style={{fontSize:20,fontWeight:800,color:C.black,marginBottom:44,textAlign:"center"}}>이렇게 이용하세요</h2>
-          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(180px,1fr))",gap:40}}>
-            {[
-              {n:"01",t:"연구 탐색",d:"분야·방식·보상금 기준으로 원하는 연구를 찾아보세요.",
-               svg:<svg viewBox="0 0 56 56" fill="none" style={{width:52,height:52}}><circle cx="28" cy="28" r="24" fill="#F0F0F0"/><circle cx="26" cy="26" r="10" stroke="#111" strokeWidth="2.5"/><line x1="33" y1="33" x2="40" y2="40" stroke="#111" strokeWidth="2.5" strokeLinecap="round"/></svg>},
-              {n:"02",t:"간편 신청",d:"기본 정보만 입력하면 참가 신청이 완료됩니다.",
-               svg:<svg viewBox="0 0 56 56" fill="none" style={{width:52,height:52}}><circle cx="28" cy="28" r="24" fill="#F0F0F0"/><rect x="18" y="16" width="20" height="24" rx="3" fill="white" stroke="#111" strokeWidth="2"/><line x1="22" y1="24" x2="34" y2="24" stroke="#111" strokeWidth="1.8"/><line x1="22" y1="30" x2="30" y2="30" stroke="#111" strokeWidth="1.8"/><polyline points="22,36 25,39 30,33" stroke="#111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>},
-              {n:"03",t:"선정 알림",d:"연구자가 선정하면 이메일로 알림이 옵니다.",
-               svg:<svg viewBox="0 0 56 56" fill="none" style={{width:52,height:52}}><circle cx="28" cy="28" r="24" fill="#F0F0F0"/><path d="M18 24 Q28 18 38 24 L38 36 Q28 40 18 36Z" fill="white" stroke="#111" strokeWidth="2"/><polyline points="18,24 28,31 38,24" stroke="#111" strokeWidth="2" strokeLinecap="round"/></svg>},
-              {n:"04",t:"보상 수령",d:"연구 완료 후 현금으로 보상을 받으세요.",
-               svg:<svg viewBox="0 0 56 56" fill="none" style={{width:52,height:52}}><circle cx="28" cy="28" r="24" fill="#F0F0F0"/><circle cx="28" cy="28" r="11" fill="white" stroke="#111" strokeWidth="2"/><text x="28" y="33" textAnchor="middle" fontSize="12" fontWeight="800" fill="#111" fontFamily="sans-serif">₩</text></svg>},
-            ].map(item=>(
-              <div key={item.n} style={{textAlign:"center"}}>
-                <div style={{display:"flex",justifyContent:"center",marginBottom:14}}>{item.svg}</div>
-                <div style={{fontSize:10,fontWeight:800,color:C.gray300,letterSpacing:"0.1em",marginBottom:7}}>STEP {item.n}</div>
-                <h3 style={{fontSize:15,fontWeight:800,color:C.black,marginBottom:7}}>{item.t}</h3>
-                <p style={{fontSize:13,color:C.gray500,lineHeight:1.65}}>{item.d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section style={{background:C.black,padding:"60px 24px",textAlign:"center"}}>
         <h2 style={{fontSize:24,fontWeight:900,color:C.white,marginBottom:10,letterSpacing:"-0.02em"}}>연구자이신가요?</h2>
         <p style={{color:"rgba(255,255,255,0.5)",fontSize:15,marginBottom:26,lineHeight:1.7}}>IRB 승인 연구를 등록하고 검증된 참가자를 모집하세요.</p>
@@ -819,3 +780,4 @@ export default function App(){
     </div>
   );
 }
+
